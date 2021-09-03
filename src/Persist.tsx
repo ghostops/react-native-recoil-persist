@@ -1,5 +1,5 @@
-import AsyncStorage from '@react-native-community/async-storage';
-import { AtomEffect, DefaultValue } from 'recoil';
+import AsyncStorage from "@react-native-community/async-storage";
+import { AtomEffect, DefaultValue } from "recoil";
 
 interface StorageInterface {
   getItem: (localStorageKey: string) => Promise<string | null>;
@@ -12,14 +12,14 @@ export const defaultStorageInterface: StorageInterface = {
 };
 
 export const defaultLocalStorageKey: string =
-  'asyncRecoilPersistStorageReactNative';
+  "asyncRecoilPersistStorageReactNative";
 
 export class ReactNativeRecoilPersist {
   private cachedState: Record<string, any> = {};
 
   constructor(
     private storageHandlers: StorageInterface = defaultStorageInterface,
-    private key: string = defaultLocalStorageKey,
+    private key: string = defaultLocalStorageKey
   ) {}
 
   public init = async () => {
@@ -72,7 +72,8 @@ export class ReactNativeRecoilPersist {
   };
 
   public persistAtom: AtomEffect<any> = ({ onSet, node, trigger, setSelf }) => {
-    if (trigger === 'get') {
+    if (trigger === "get") {
+      console.log(this.cachedState);
       if (this.cachedState.hasOwnProperty(node.key)) {
         setSelf(this.cachedState[node.key]);
       }

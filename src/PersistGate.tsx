@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { ReactNativeRecoilPersist } from './';
+import React, { useEffect, useState } from "react";
+import { ReactNativeRecoilPersist } from "./";
 
 type Props = {
   store: ReactNativeRecoilPersist;
