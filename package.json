@@ -1,0 +1,15 @@
+{
+  "name": "react-native-recoil-persist",
+  "version": "0.0.1",
+  "description": "React Native Recoil Persist is used to persist Recoil state to AsyncStorage",
+  "main": "build/index.js",
+  "author": "Ludvig Larsendahl",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
+    "recoil": "^0.4.1"
+  }
+}
