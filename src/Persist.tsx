@@ -73,7 +73,6 @@ export class ReactNativeRecoilPersist {
 
   public persistAtom: AtomEffect<any> = ({ onSet, node, trigger, setSelf }) => {
     if (trigger === "get") {
-      console.log(this.cachedState);
       if (this.cachedState.hasOwnProperty(node.key)) {
         setSelf(this.cachedState[node.key]);
       }
