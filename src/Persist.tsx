@@ -83,5 +83,3 @@ export class ReactNativeRecoilPersist {
     });
   };
 }
-
-export default new ReactNativeRecoilPersist();
