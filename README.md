@@ -18,31 +18,33 @@ or
 
 Add the `ReactNativeRecoilPersistGate` as the first component inside of the `RecoilRoot`, wrapping the rest of your app.
 
-``` javascript
-import React from 'react';
-import ReactNativeRecoilPersist, { ReactNativeRecoilPersistGate } from 'react-native-recoil-persist';
-import { RecoilRoot } from 'recoil';
+```javascript
+import React from "react";
+import ReactNativeRecoilPersist, {
+  ReactNativeRecoilPersistGate,
+} from "react-native-recoil-persist";
+import { RecoilRoot } from "recoil";
 
 export const AppRoot = () => {
   return (
-      <RecoilRoot>
-        <ReactNativeRecoilPersistGate store={ReactNativeRecoilPersist}>
-          <RestOfYourApp />
-        </ReactNativeRecoilPersistGate>
-      </RecoilRoot>
+    <RecoilRoot>
+      <ReactNativeRecoilPersistGate store={ReactNativeRecoilPersist}>
+        <RestOfYourApp />
+      </ReactNativeRecoilPersistGate>
+    </RecoilRoot>
   );
 };
 ```
 
 ### Usage in Atoms
 
-``` javascript
-import ReactNativeRecoilPersist from 'react-native-recoil-persist';
-import { atom } from 'recoil';
+```javascript
+import ReactNativeRecoilPersist from "react-native-recoil-persist";
+import { atom } from "recoil";
 
 const testAtom = atom({
-  default: 'I am a test',
-  key: 'test',
+  default: "I am a test",
+  key: "test",
   // Add this effect to the atom to persist it
   effects_UNSTABLE: [ReactNativeRecoilPersist.persistAtom],
 });
@@ -50,29 +52,24 @@ const testAtom = atom({
 
 ## Functionality
 
-#### `import ReactNativeRecoilPersist from 'react-native-recoil-persist'`
-
+`import ReactNativeRecoilPersist from 'react-native-recoil-persist'`
 A singleton of `ReactNativeRecoilPersist` that you can start using with the default configuration.
 
-#### `import { ReactNativeRecoilPersist } from 'react-native-recoil-persist'`
-
+`import { ReactNativeRecoilPersist } from 'react-native-recoil-persist'`
 Exports the raw `ReactNativeRecoilPersist` class, which you can configure as a singleton yourself.
 
-#### `import { ReactNativeRecoilPersistGate } from 'react-native-recoil-persist'`
-
+`import { ReactNativeRecoilPersistGate } from 'react-native-recoil-persist'`
 The Persist Gate component that you need to render after the `RecoilRoot` in the tree.
 
-#### `import { defaultLocalStorageKey } from 'react-native-recoil-persist'`
-
+`import { defaultLocalStorageKey } from 'react-native-recoil-persist'`
 An export of the default local storage key used.
 
-#### `import { defaultStorageInterface } from 'react-native-recoil-persist'`
-
+`import { defaultStorageInterface } from 'react-native-recoil-persist'`
 An export of the default storage functions used. Look at this if you want to configure your own singleton and use something other than AsyncStorage.
 
 ## Run example app
 
-``` shell
+```shell
 git clone X
 
 cd react-native-recoil-persist
