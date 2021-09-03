@@ -7,13 +7,16 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@react-native-community/async-storage": "^1.12.1",
     "@types/react": "^17.0.19",
+    "recoil": "^0.4.1",
     "typescript": "^4.4.2"
   },
-  "dependencies": {
-    "@react-native-community/async-storage": "^1.12.1",
-    "react": "^17.0.2",
-    "recoil": "^0.4.1"
+  "peerDependencies": {
+    "@react-native-community/async-storage": "*",
+    "react": "*",
+    "react-native": "*",
+    "recoil": "*"
   },
   "scripts": {
     "build": "yarn tsc --project ./tsconfig.json"
