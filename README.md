@@ -70,7 +70,7 @@ An export of the default storage functions used. Look at this if you want to con
 ## Run example app
 
 ```shell
-git clone X
+git clone git@github.com:ghostops/react-native-recoil-persist.git
 
 cd react-native-recoil-persist
 yarn install
