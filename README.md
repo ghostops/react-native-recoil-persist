@@ -2,7 +2,7 @@
 
 Module inspired by [recoil-persist](https://www.npmjs.com/package/recoil-persist) used to persist asynchronous Recoil state in react-native. The main difference from `recoil-persist` is that this package includes a `ReactNativeRecoilPersistGate` blocking the rest of the App from rendering until the store has been loaded from AsyncStorage and parsed.
 
-### Depends on `@react-native-community/async-storage`
+### Depends on `@react-native-async-storage/async-storage`
 
 ## Install
 
