@@ -5,6 +5,7 @@ type Props = {
   store: ReactNativeRecoilPersist;
   fallback?: React.ReactNode;
   onInit?: () => void;
+  children?: any;
 };
 
 export const ReactNativeRecoilPersistGate: React.FC<Props> = ({
