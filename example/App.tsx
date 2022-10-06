@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactNativeRecoilPersist, {ReactNativeRecoilPersistGate} from '../src';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {View, Text, TouchableOpacity, ActivityIndicator} from 'react-native';
 import {atom, RecoilRoot, useRecoilState} from 'recoil';
 
